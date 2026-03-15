@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Tesla Daily</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 style="padding:40px;">Create Article</h1>
+
+<div style="padding:40px; max-width:600px; margin:auto;">
+  <input type="text" id="title" placeholder="Article Title"><br><br>
+
+  <select id="category">
+    <option value="news">News</option>
+    <option value="cybertruck">Cybertruck</option>
+    <option value="modely">Model Y</option>
+    <option value="energy">Energy</option>
+    <option value="autonomy">Autonomy</option>
+  </select><br><br>
+
+  <input type="file" id="imageInput"><br><br>
+
+  <input type="text" id="xLinkInput" placeholder="Paste X link (optional)"><br><br>
+
+  <textarea id="contentInput" placeholder="Write article here..." rows="6"></textarea><br><br>
+
+  <button onclick="addPost()">Publish</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<footer class="footer">
+  <p>© 2026 Tesla Daily</p>
+  <p>
+    Tesla Daily is an independent fan site and is not affiliated with or endorsed by Tesla, Inc.
+  </p>
+</footer>

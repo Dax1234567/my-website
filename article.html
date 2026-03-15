@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Article - MyTeslaDaily</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="logo">
+  <img src="images/mytesladaily-logo.png" alt="MyTeslaDaily Logo">
+</div>
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
+</header>
+
+<section class="content">
+  <div id="articleContainer"></div>
+</section>
+
+<script src="script.js"></script>
+<script async src="https://platform.twitter.com/widgets.js"></script>
+<script>
+  const article = JSON.parse(localStorage.getItem("selectedArticle"));
+  const container = document.getElementById("articleContainer");
+
+  if (article) {
+    container.innerHTML = `
+      <h1>${article.title}</h1>
+      <small>${article.date}</small>
+      <p>${article.content}</p>
+      ${
+        article.xLink
+          ? `<blockquote class="twitter-tweet">
+               <a href="${article.xLink}"></a>
+             </blockquote>`
+          : ""
+      }
+    `;
+  }
+</script>
+
+</body>
+</html>
+<footer class="footer">
+  <p>© 2026 Tesla Daily</p>
+  <p>
+   MyTeslaDaily is an independent fan site and is not affiliated with or endorsed by Tesla, Inc.
+  </p>
+</footer>
